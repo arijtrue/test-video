@@ -11,6 +11,7 @@ parameters:
 framework:
     #esi: ~
     #translator: { fallbacks: ['%locale%'] }
+    translator: ~
     secret: '%secret%'
     form: ~
     csrf_protection: ~
@@ -70,7 +71,7 @@ sensio_framework_extra:
 fos_user:
     db_driver: orm
     firewall_name: main
-    user_class: SiteDevel\VideoBundle\Entity\User
+    user_class: SiteDevel\UserBundle\Entity\User
     service:                               # this lines
         mailer: fos_user.mailer.twig_swift
     from_email:
