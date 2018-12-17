@@ -1,0 +1,3 @@
+site_devel_video_homepage:
+    path:     /
+    defaults: { _controller: SiteDevelVideoBundle:Default:index }

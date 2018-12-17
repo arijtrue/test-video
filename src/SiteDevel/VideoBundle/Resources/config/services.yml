@@ -1,0 +1,4 @@
+services:
+#    site_devel_video.example:
+#        class: SiteDevel\VideoBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
