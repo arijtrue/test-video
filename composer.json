@@ -5,6 +5,7 @@
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
         "psr-4": {
+            "SiteDevel\\UserBundle\\": "src/SiteDevel/UserBundle",
             "SiteDevel\\VideoBundle\\": "src/SiteDevel/VideoBundle"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]

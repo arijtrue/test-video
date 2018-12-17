@@ -23,6 +23,7 @@ class AppKernel extends Kernel
 
             // Project specific bundles
             new SiteDevel\VideoBundle\SiteDevelVideoBundle(),
+            new SiteDevel\UserBundle\SiteDevelUserBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

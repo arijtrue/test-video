@@ -1,3 +1,7 @@
 site_devel_video:
     resource: "@SiteDevelVideoBundle/Resources/config/routing.yml"
     prefix:   /
+
+site_devel_user:
+    resource: "@SiteDevelUserBundle/Resources/config/routing.yml"
+    prefix:   /
