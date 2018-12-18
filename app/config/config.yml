@@ -72,7 +72,7 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: SiteDevel\UserBundle\Entity\User
-    service:                               # this lines
+    service:
         mailer: fos_user.mailer.twig_swift
     from_email:
         sender_name: '%fos_from_email%'
@@ -83,4 +83,10 @@ doctrine_migrations:
     namespace: Application\Migrations
     table_name: migration_versions
     name: Application Migrations
-    organize_migrations: false # Version >=1.2 Possible values are: "BY_YEAR", "BY_YEAR_AND_MONTH", false
+    organize_migrations: false
+
+stof_doctrine_extensions:
+    default_locale: en_US
+    orm:
+        default:
+            timestampable: true
