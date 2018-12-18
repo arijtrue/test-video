@@ -6,8 +6,7 @@
     "autoload": {
         "psr-4": {
             "SiteDevel\\UserBundle\\": "src/SiteDevel/UserBundle",
-            "SiteDevel\\VideoBundle\\": "src/SiteDevel/VideoBundle",
-            "SiteDevel\\VideoApiBundle\\": "src/SiteDevel/VideoApiBundle"
+            "SiteDevel\\VideoBundle\\": "src/SiteDevel/VideoBundle"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
