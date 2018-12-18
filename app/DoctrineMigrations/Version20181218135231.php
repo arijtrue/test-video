@@ -26,26 +26,22 @@ class Version20181218135231 extends AbstractMigration implements ContainerAwareI
 
     /**
      * @param Schema $schema
-     *
-     * @throws \Doctrine\ORM\OptimisticLockException
      */
     public function up(Schema $schema)
     {
-        $em = $this->getEntityManager();
+        $userManager = $this->container->get('fos_user.user_manager');
 
         for ($i = 1; $i <= $this->container->getParameter('test_user_amount'); $i++) {
             $userName = sprintf('user%d', $i);
-            $user = new User();
+            $user = $userManager->createUser();
             $user
                 ->setUsername($userName)
                 ->setEmail(sprintf('%s@gmail.com', $userName))
                 ->setEnabled(true)
                 ->setPlainPassword('111')
             ;
-            $em->persist($user);
+            $userManager->updateUser($user);
         }
-
-        $em->flush();
     }
 
     /**
@@ -55,20 +51,6 @@ class Version20181218135231 extends AbstractMigration implements ContainerAwareI
      */
     public function down(Schema $schema)
     {
-        $em = $this->getEntityManager();
-
-        foreach ($em->getRepository('SiteDevelUserBundle:User')->findAll() as $user) {
-            $em->remove($em);
-        }
-
-        $em->flush();
-    }
-
-    /**
-     * @return EntityManager
-     */
-    private function getEntityManager()
-    {
-        return $this->container->get('doctrine.orm.default_entity_manager');
+        $this->addSql('DELETE FROM `fos_user`');
     }
 }
