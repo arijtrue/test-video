@@ -19,3 +19,4 @@ parameters:
     secret: ThisTokenIsNotSoSecretChangeIt
 
     fos_from_email: some@dummy.com
+    test_user_amount: 5
