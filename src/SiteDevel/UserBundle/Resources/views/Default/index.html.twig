@@ -1,1 +1,9 @@
-Hello World!
+<html>
+<head>
+    <title>Logged in</title>
+</head>
+<body>
+    <p>Logged-in as '{{ user.username }}' <a href="{{ path('fos_user_security_logout') }}">logout</a></p>
+    <p>User token: {{ user.password }}</p>
+</body>
+</html>

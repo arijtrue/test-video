@@ -8,6 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('SiteDevelUserBundle:Default:index.html.twig');
+        return $this->render('@SiteDevelUser/Default/index.html.twig', [
+            'user' => $this->getUser(),
+        ]);
     }
 }
