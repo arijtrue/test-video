@@ -10,10 +10,10 @@ echo "Dependencies install"
 composer install
 
 echo "Create DB"
-bin/console doctrine:database:create
+bin/console --no-interaction doctrine:database:create
 
 echo "Installing DB tables + data"
-bin/console doctrine:migrations:migrate
+bin/console --no-interaction doctrine:migrations:migrate
 
 echo "Permissions, folder var"
 find var | xargs chmod -v 777
