@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+echo "Composer install"
+composer install
+
+echo "Installing DB tables + data"
+bin/console doctrine:migrations:migrate
+
+echo "Permissions, folder var"
+find var | xargs chmod -v 777

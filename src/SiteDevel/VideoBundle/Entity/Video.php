@@ -5,9 +5,10 @@ namespace SiteDevel\VideoBundle\Entity;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 use SiteDevel\UserBundle\Entity\User;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="SiteDevel\VideoBundle\Entity\Repository\VideoRepository")
  * @ORM\Table
  */
 class Video
@@ -26,7 +27,7 @@ class Video
      *
      * @ORM\ManyToOne(
      *     targetEntity="SiteDevel\UserBundle\Entity\User",
-     *     inversedBy="addedBy"
+     *     inversedBy="videos"
      * )
      * @ORM\JoinColumn(nullable=false)
      */
@@ -36,6 +37,8 @@ class Video
      * @var string
      *
      * @ORM\Column(type="string", length=1024, nullable=false)
+     *
+     * @Assert\NotBlank()
      */
     private $title;
 
@@ -43,6 +46,8 @@ class Video
      * @var string
      *
      * @ORM\Column(type="string", length=8196, nullable=false)
+     *
+     * @Assert\NotBlank()
      */
     private $description;
 
@@ -50,6 +55,12 @@ class Video
      * @var string
      *
      * @ORM\Column(type="string", length=4, nullable=false)
+     *
+     * @Assert\NotBlank()
+     * @Assert\Regex(
+     *     pattern="/^-?\d+$/",
+     *     message="Only numbers accepted, e.g.: 1980, 2014, -126"
+     * )
      */
     private $year;
 
@@ -68,6 +79,7 @@ class Video
      *     targetEntity="SiteDevel\UserBundle\Entity\User",
      *     inversedBy="favouriteVideos"
      * )
+     * @ORM\JoinTable(name="user_video_favourited")
      */
     private $favoritedBy;
 

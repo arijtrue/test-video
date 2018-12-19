@@ -13,7 +13,7 @@ site_devel_video:
 
 site_devel_video_api:
     resource: "@SiteDevelVideoBundle/Resources/config/api_routing_v1.yml"
-    prefix: /api/v1
+    prefix: /api
     defaults:
         _format: json
 

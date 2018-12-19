@@ -13,3 +13,6 @@ services:
         class: SiteDevel\VideoBundle\Security\ApiKeyUserProvider
         arguments:
             - '@doctrine.orm.entity_manager'
+
+    site_devel_video.assembler.video_assembler:
+        class: SiteDevel\VideoBundle\Assembler\VideoAssembler
