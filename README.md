@@ -21,8 +21,12 @@ _Apache2 config:_
 _Installation script_:
 =
 Run from the project root folder `bin/install` it will:
-* install composer
+* install composer (with wget)
 * install dependencies via composer + request(prompt) access to DB (access parameters)
+  * `database_*` - mysql user should have the rights to create DB
+  * `mailer_*` - leave it blank
+  * `secret` - some dummy text
+  * others - just leave default values
 * create DB (on behalf of specified user)
 * apply migrations:
   * db structure
