@@ -1,0 +1,9 @@
+version: "3"
+
+services:
+  web-test-video:
+    image: php:apache
+    volumes:
+      - ./web:/var/www/html
+    ports:
+      - 5000:80
