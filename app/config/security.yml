@@ -12,11 +12,23 @@ security:
         fos_userbundle:
             id: fos_user.user_provider.username
 
+        api_key_user_provider:
+            id: site_devel_video.security.api_key_user_provider
+
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
             security: false
+
+        api:
+            pattern: ^/api/
+            stateless: true
+            anonymous: false
+            guard:
+                authenticators:
+                    - site_devel_video.security.api_key_authenticator
+            provider: api_key_user_provider
 
         main:
             pattern: ^/

@@ -4,6 +4,10 @@
 </head>
 <body>
     <p>Logged-in as '{{ user.username }}' <a href="{{ path('fos_user_security_logout') }}">logout</a></p>
-    <p>User token: {{ user.password }}</p>
+    <p>
+        <a href="{{ path('nelmio_api_doc_index') }}">api-doc + sandbox</a><br>
+        Auth-Header:<br>
+        apikey: {{ user.password }}
+    </p>
 </body>
 </html>

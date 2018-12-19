@@ -2,3 +2,14 @@ services:
 #    site_devel_video.example:
 #        class: SiteDevel\VideoBundle\Example
 #        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    site_devel_video.security.api_key_authenticator:
+        class:  SiteDevel\VideoBundle\Security\ApiKeyAuthenticator
+        arguments:
+            - '@doctrine.orm.entity_manager'
+        public: false
+
+    site_devel_video.security.api_key_user_provider:
+        class: SiteDevel\VideoBundle\Security\ApiKeyUserProvider
+        arguments:
+            - '@doctrine.orm.entity_manager'
