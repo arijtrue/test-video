@@ -20,7 +20,13 @@ class VideoController extends FOSRestController
     /**
      * List all videos which were not favourited by this user.
      *
-     * @Rest\Route(path="/not-favourited", methods={"GET"}, defaults={"_format": "json"})
+     * @Rest\Route(
+     *     path="/not-favourited",
+     *     methods={"GET"},
+     *     defaults={
+     *          "_format": "json"
+     *     }
+     * )
      *
      * @ApiDoc(
      *     headers={
@@ -67,7 +73,13 @@ class VideoController extends FOSRestController
     /**
      * This method will add a video.
      *
-     * @Rest\Route(path="/add", methods={"POST"}, defaults={"_format": "json"})
+     * @Rest\Route(
+     *     path="/add",
+     *     methods={"POST"},
+     *     defaults={
+     *          "_format": "json"
+     *     }
+     * )
      *
      * @ApiDoc(
      *     headers={
@@ -134,7 +146,13 @@ class VideoController extends FOSRestController
     /**
      * This method will make this video favourited.
      *
-     * @Rest\Route(path="/favourite/{video}", methods={"PATCH"}, defaults={"_format": "json"})
+     * @Rest\Route(
+     *     path="/favourite/{video}",
+     *     methods={"PATCH"},
+     *     defaults={
+     *          "_format": "json"
+     *     }
+     * )
      *
      * @ApiDoc(
      *     headers={

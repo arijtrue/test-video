@@ -106,7 +106,7 @@ fos_rest:
     serializer:
         serialize_null: true
     routing_loader:
-        prefix_methods: true
+        prefix_methods: false
         default_format: json
         include_format: false
     view:
