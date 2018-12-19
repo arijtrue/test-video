@@ -1,7 +1,16 @@
 #!/usr/bin/env bash
 
+
+
 echo "Composer install"
+wget -O composer https://getcomposer.org/download/1.8.0/composer.phar
+chmod +x composer
+
+echo "Dependencies install"
 composer install
+
+echo "Create DB"
+bin/console doctrine:database:create
 
 echo "Installing DB tables + data"
 bin/console doctrine:migrations:migrate
