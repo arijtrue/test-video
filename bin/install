@@ -1,19 +1,14 @@
 #!/usr/bin/env bash
 
+echo "Bundles install"
+composer install --no-interaction
 
-
-echo "Composer install"
-wget -O composer https://getcomposer.org/download/1.8.0/composer.phar
-chmod +x composer
-
-echo "Dependencies install"
-composer install
-
-echo "Create DB"
-bin/console --no-interaction doctrine:database:create
+#echo "Create DB"
+#./console --no-interaction doctrine:database:create
 
 echo "Installing DB tables + data"
-bin/console --no-interaction doctrine:migrations:migrate
+./console --no-interaction doctrine:migrations:migrate
 
 echo "Permissions, folder var"
-find var | xargs chmod -v 777
+MY_PATH="`dirname \"$0\"`"
+find $MY_PATH/../var | xargs chmod -v 777
