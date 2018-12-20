@@ -22,6 +22,8 @@ services:
       MYSQL_DATABASE: testvideo
       MYSQL_USER: testvideo
       MYSQL_PASSWORD: testvideo
+    ports:
+      - 33060:3306
 
   php:
     build: .docker/php

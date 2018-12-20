@@ -3,7 +3,7 @@
 # https://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
     database_host: sf3_mysql
-    database_port: ~
+    database_port: 33060
     database_name: testvideo
     database_user: testvideo
     database_password: testvideo
