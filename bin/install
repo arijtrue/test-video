@@ -7,7 +7,7 @@ composer install --no-interaction
 #./console --no-interaction doctrine:database:create
 
 echo "Installing DB tables + data"
-./console --no-interaction doctrine:migrations:migrate
+bin/console --no-interaction doctrine:migrations:migrate
 
 echo "Permissions, folder var"
 MY_PATH="`dirname \"$0\"`"
