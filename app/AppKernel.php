@@ -29,7 +29,6 @@ class AppKernel extends Kernel
             new JMS\SerializerBundle\JMSSerializerBundle(),
 
             // Project specific bundles
-            new SiteDevel\UserBundle\SiteDevelUserBundle(),
             new SiteDevel\VideoBundle\SiteDevelVideoBundle(),
         ];
 
