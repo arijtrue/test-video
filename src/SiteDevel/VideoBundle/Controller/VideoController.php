@@ -7,7 +7,7 @@ use FOS\RestBundle\Controller\FOSRestController;
 use FOS\RestBundle\Request\ParamFetcherInterface;
 use FOS\RestBundle\View\View;
 use JMS\Serializer\SerializationContext;
-use SiteDevel\UserBundle\Entity\User;
+use SiteDevel\VideoBundle\Entity\User;
 use SiteDevel\VideoBundle\DataTransferObject\VideoDTO;
 use SiteDevel\VideoBundle\Entity\Video;
 use Nelmio\ApiDocBundle\Annotation\ApiDoc;

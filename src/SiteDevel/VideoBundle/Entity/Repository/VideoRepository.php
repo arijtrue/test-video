@@ -3,7 +3,7 @@
 namespace SiteDevel\VideoBundle\Entity\Repository;
 
 use Doctrine\ORM\EntityRepository;
-use SiteDevel\UserBundle\Entity\User;
+use SiteDevel\VideoBundle\Entity\User;
 use SiteDevel\VideoBundle\Entity\Video;
 
 class VideoRepository extends EntityRepository

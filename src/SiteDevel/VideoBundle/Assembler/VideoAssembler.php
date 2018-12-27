@@ -2,7 +2,7 @@
 
 namespace SiteDevel\VideoBundle\Assembler;
 
-use SiteDevel\UserBundle\Entity\User;
+use SiteDevel\VideoBundle\Entity\User;
 use SiteDevel\VideoBundle\DataTransferObject\VideoDTO;
 use SiteDevel\VideoBundle\Entity\Video;
 

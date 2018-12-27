@@ -4,7 +4,7 @@ namespace SiteDevel\VideoBundle\Entity;
 
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
-use SiteDevel\UserBundle\Entity\User;
+use SiteDevel\VideoBundle\Entity\User;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
@@ -26,7 +26,7 @@ class Video
      * @var User
      *
      * @ORM\ManyToOne(
-     *     targetEntity="SiteDevel\UserBundle\Entity\User",
+     *     targetEntity="SiteDevel\VideoBundle\Entity\User",
      *     inversedBy="videos"
      * )
      * @ORM\JoinColumn(nullable=false)
@@ -76,7 +76,7 @@ class Video
      * @var User[]
      *
      * @ORM\ManyToMany(
-     *     targetEntity="SiteDevel\UserBundle\Entity\User",
+     *     targetEntity="SiteDevel\VideoBundle\Entity\User",
      *     inversedBy="favouriteVideos"
      * )
      * @ORM\JoinTable(name="user_video_favourited")

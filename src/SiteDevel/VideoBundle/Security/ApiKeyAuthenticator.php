@@ -3,7 +3,7 @@
 namespace SiteDevel\VideoBundle\Security;
 
 use Doctrine\ORM\EntityManagerInterface;
-use SiteDevel\UserBundle\Entity\User;
+use SiteDevel\VideoBundle\Entity\User;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
